@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Eduardo Ledo Rubio - Digital Marketing Infographic CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Energetic & Playful (Adapted for Dark Theme) -->
+    <!-- Application Structure Plan: The SPA is structured as a narrative career journey. It starts with a summary and a visual of experience blend (Donut Chart). It then progresses chronologically through a Career Timeline (HTML/CSS). Next, it details Core Competencies using a Radar Chart for skills and styled cards for KPIs. It follows with an eCommerce Funnel diagram (HTML/CSS) to show strategic thinking. It concludes with a grid of Certifications. This structure tells a compelling story of growth and expertise, making it more engaging than a traditional CV. -->
+    <!-- Visualization & Content Choices: 1. Experience Blend -> Compare -> Donut Chart (Chart.js) -> Shows composition of experience. 2. Career Progression -> Change -> Timeline (HTML/CSS) -> Shows chronological growth. 3. Skill Proficiency -> Compare -> Radar Chart (Chart.js) -> Shows multi-dimensional expertise. 4. KPIs -> Inform -> Styled Cards (HTML/CSS) -> Highlights key metrics. 5. eCommerce Funnel -> Organize -> Flowchart Diagram (HTML/CSS) -> Visualizes strategic process. 6. Certifications -> Organize -> Badge Grid (HTML/CSS) -> Scannable proof of credentials. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: #1F2937;
+            border-left: 4px solid #00A6ED;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: -0.6rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: #00A6ED;
+            border-radius: 50%;
+            border: 3px solid #F5B700;
+        }
+        .funnel-arrow {
+            font-size: 2.5rem;
+            color: #F5B700;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">Carlos Eduardo Ledo Rubio</h1>
+            <p class="text-xl md:text-2xl font-semibold text-[#00A6ED] mt-2">Digital Marketing Manager | A Visual Career Journey</p>
+        </header>
+
+        <section id="intro" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl">
+                    <h2 class="text-3xl font-bold mb-4 text-[#F5B700]">A Dynamic Career Path</h2>
+                    <p class="text-lg text-gray-300 mb-6">My professional journey is built on a unique foundation of diverse experiences. This blend of agency, freelance, and client-side roles has provided a holistic understanding of the paid media landscape, accelerating my ability to drive growth and deliver results.</p>
+                    <div class="text-7xl font-black text-white">
+                        8<span class="text-5xl text-[#00A6ED]">+</span>
+                        <p class="text-2xl font-semibold text-gray-400 mt-2">Years of Progressive Experience</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="chart-container h-[300px] md:h-[350px]">
+                        <canvas id="experienceBlendChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-400 mt-4 text-sm">This chart illustrates the composition of my professional background, highlighting a well-rounded perspective gained from working on every side of the digital marketing table.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Career Progression</h2>
+            <div class="relative border-l-4 border-gray-700 ml-4 md:ml-0">
+                <div class="timeline-item mb-12 pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Search Manager</h3>
+                    <p class="text-lg font-semibold text-white">OMD (Hearts & Science) | 2024 – Present</p>
+                    <p class="text-gray-300 mt-2">Leading implementation, optimization, and budget forecasting for high-stakes Search campaigns, decreasing CPC while increasing CTR for branding initiatives.</p>
+                </div>
+                <div class="timeline-item mb-12 pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Paid Media Manager</h3>
+                    <p class="text-lg font-semibold text-white">Partner Digital | 2023 – 2024</p>
+                    <p class="text-gray-300 mt-2">Led a 5-person team, managed client relationships, and implemented agile methodologies. Grew ROAS for a key eCommerce client from 2.3x to 3.5x.</p>
+                </div>
+                 <div class="timeline-item mb-12 pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Campaign Management Sr Associate</h3>
+                    <p class="text-lg font-semibold text-white">IPG (Kinesso) | 2022 – 2023</p>
+                    <p class="text-gray-300 mt-2">Managed and optimized Programmatic & Search campaigns for key retail accounts like Amazon and Tracfone, coordinating with cross-functional teams.</p>
+                </div>
+                <div class="timeline-item mb-12 pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Digital Marketing & Ecommerce Specialist</h3>
+                    <p class="text-lg font-semibold text-white">Fandeli | 2020 – 2022</p>
+                    <p class="text-gray-300 mt-2">Drove eCommerce growth by managing agency partners and executing campaigns on Amazon & Walmart. Increased US Amazon ROAS from 3x to over 5x.</p>
+                </div>
+                <div class="timeline-item mb-12 pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Paid Media Manager (Freelance)</h3>
+                    <p class="text-lg font-semibold text-white">Mercatus Mater | 2019 – 2023</p>
+                    <p class="text-gray-300 mt-2">Provided strategic consulting and campaign management for a diverse portfolio of clients, developing digital guidelines and strategies.</p>
+                </div>
+                <div class="timeline-item pl-8 md:pl-12 relative">
+                    <h3 class="text-2xl font-bold text-[#F5B700]">Foundation Roles</h3>
+                    <p class="text-lg font-semibold text-white">Trafficker & Programmatic Specialist | 2016 – 2019</p>
+                    <p class="text-gray-300 mt-2">Built a strong technical foundation in ad operations and programmatic buying at KTBO and Dentsu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Core Competencies</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl">
+                     <h3 class="text-2xl font-bold text-center mb-4 text-[#F5B700]">Paid Media Platform Proficiency</h3>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                     <p class="text-center text-gray-400 mt-4 text-sm">This radar chart shows my proficiency across the paid media ecosystem. I have deep expertise in core platforms like Google and Meta, complemented by strong skills in programmatic, social, and retail media.</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#F5B700]">Key Performance Indicators</h3>
+                     <p class="text-center text-gray-300 mb-6">My focus is always on the metrics that drive business growth and demonstrate clear returns on investment.</p>
+                    <div class="kpi-card p-4 rounded-lg">
+                        <p class="text-lg font-bold">ROAS & ROI</p>
+                        <p class="text-gray-400">Maximizing return on ad spend is my primary goal.</p>
+                    </div>
+                    <div class="kpi-card p-4 rounded-lg">
+                        <p class="text-lg font-bold">CPA & CLTV</p>
+                        <p class="text-gray-400">Balancing acquisition cost with long-term customer value.</p>
+                    </div>
+                    <div class="kpi-card p-4 rounded-lg">
+                        <p class="text-lg font-bold">Conversion Rate (CVR)</p>
+                        <p class="text-gray-400">Continuously optimizing the path from click to conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecommerce" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">eCommerce Funnel Mastery</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-300 mb-12">I specialize in building and optimizing full-funnel strategies for eCommerce and retail clients, ensuring every stage of the customer journey is effectively targeted with the right platforms and messaging.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4">
+                <div class="text-center bg-gray-800 p-6 rounded-2xl shadow-xl w-full md:w-1/4">
+                    <h3 class="text-xl font-bold text-[#70C1B3]">Awareness</h3>
+                    <p class="mt-2 text-gray-400">Meta Ads, TikTok, YouTube, Discovery</p>
+                </div>
+                <div class="funnel-arrow hidden md:block">→</div>
+                <div class="text-center bg-gray-800 p-6 rounded-2xl shadow-xl w-full md:w-1/4">
+                    <h3 class="text-xl font-bold text-[#70C1B3]">Consideration</h3>
+                    <p class="mt-2 text-gray-400">Generic Search, Display, Social Engagement</p>
+                </div>
+                <div class="funnel-arrow hidden md:block">→</div>
+                <div class="text-center bg-gray-800 p-6 rounded-2xl shadow-xl w-full md:w-1/4">
+                    <h3 class="text-xl font-bold text-[#00A6ED]">Conversion</h3>
+                    <p class="mt-2 text-gray-400">Google Shopping, Branded Search, Retargeting</p>
+                </div>
+                 <div class="funnel-arrow hidden md:block">→</div>
+                <div class="text-center bg-gray-800 p-6 rounded-2xl shadow-xl w-full md:w-1/4">
+                    <h3 class="text-xl font-bold text-[#00A6ED]">Loyalty</h3>
+                    <p class="mt-2 text-gray-400">Email, Remarketing, Customer Match</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certifications">
+            <h2 class="text-4xl font-bold text-center mb-12">Certifications & Credentials</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-300 mb-12">My commitment to continuous learning is demonstrated by a wide range of industry-recognized certifications.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#00A6ED] text-gray-900 p-4 rounded-lg text-center font-bold shadow-lg">Google Ads Certified</div>
+                <div class="bg-gray-800 p-4 rounded-lg text-center font-semibold">Google Analytics (GAIQ)</div>
+                <div class="bg-gray-800 p-4 rounded-lg text-center font-semibold">Google Marketing Platform</div>
+                <div class="bg-gray-800 p-4 rounded-lg text-center font-semibold">Semrush PPC</div>
+                <div class="bg-gray-800 p-4 rounded-lg text-center font-semibold">HubSpot Content Mktg</div>
+                <div class="bg-gray-800 p-4 rounded-lg text-center font-semibold">Google Digital Garage</div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) {
+                return label;
+            }
+            const words = label.split(' ');
+            let currentLine = '';
+            const lines = [];
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLen) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const commonChartOptions = {
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#FFFFFF',
+                        font: {
+                            size: 14,
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#1F2937',
+                    titleFont: {
+                        size: 16,
+                        weight: 'bold'
+                    },
+                    bodyFont: {
+                        size: 14
+                    },
+                    padding: 12,
+                    cornerRadius: 8,
+                    displayColors: true,
+                    boxPadding: 4
+                }
+            }
+        };
+
+        const experienceBlendCtx = document.getElementById('experienceBlendChart').getContext('2d');
+        new Chart(experienceBlendCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['International Agency', 'Freelance & Consulting', 'Client-Side (eCommerce)'],
+                datasets: [{
+                    label: 'Experience Blend',
+                    data: [50, 30, 20],
+                    backgroundColor: ['#00A6ED', '#F5B700', '#70C1B3'],
+                    borderColor: '#111827',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                responsive: true,
+                cutout: '60%',
+            }
+        });
+
+        const skillsRadarCtx = document.getElementById('skillsRadarChart').getContext('2d');
+        new Chart(skillsRadarCtx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Google Ads', 'Meta Ads', 'Programmatic', 
+                    wrapLabel('eCommerce & Marketplaces'), 
+                    'Strategy & Planning', 'Team Leadership', 'Analytics & Data'
+                ],
+                datasets: [{
+                    label: 'Skill Level',
+                    data: [95, 90, 85, 90, 95, 80, 90],
+                    backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                    borderColor: '#00A6ED',
+                    pointBackgroundColor: '#00A6ED',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#00A6ED',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                responsive: true,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                        pointLabels: { 
+                            color: '#FFFFFF',
+                            font: {
+                                size: 12,
+                                family: "'Inter', sans-serif"
+                            }
+                        },
+                        ticks: {
+                            color: '#111827',
+                            backdropColor: 'rgba(255, 255, 255, 0.8)',
+                            stepSize: 20,
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
